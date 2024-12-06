@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Projects: React.FC = () => (
     <div>
-        <h2 className="text-2xl font-bold mb-2 bg-gradient-to-r from-orange-500 to-yellow-500 text-transparent bg-clip-text">My Projects</h2>
+        <h2 className="text-2xl font-bold mb-2 text-[#06b6d4]">My Projects</h2>
         <h3>Current projects:</h3>
         <ul className="list-disc list-inside">
             <li><a href="#" className='text-[#06B6D4] underline hover:text-[#49d8f1]'>Fitness web app</a> - Comming soon!</li>

@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useRef, useEffect } from 'react'
+import { redirect } from 'next/navigation'
 import { About } from './About'
 import { Projects } from './Projects'
 import { Media } from './Media'
@@ -66,6 +67,9 @@ const Terminal: React.FC = () => {
             case 'help':
                 setHistory(prev => [...prev, <Help key={prev.length} />])
                 break
+            case 'exit':
+                redirect("https://uikromm.github.io")
+                break
             default:
                 setHistory(prev => [...prev, `Command not found: ${input}`])
         }
@@ -75,14 +79,16 @@ const Terminal: React.FC = () => {
 
     return (
         <div className="bg-black border border-[#555] text-white p-4 font-mono h-full overflow-y-auto">
-            <div className="mb-4 bg-gradient-to-r from-orange-500 to-yellow-500 text-transparent bg-clip-text">
-                Welcome to the Web Developer Terminal Portfolio. Type 'help' for a list of commands.
+            <div className="mb-4 flex justify-between items-center">
+                <p className='bg-gradient-to-r from-cyan-500 to-indigo-400 text-transparent bg-clip-text'>Welcome to the Frontend Developer Terminal Portfolio. Type 'help' for a list of commands.</p>
+
+                <a href='https://uikromm.github.io' className="w-9 h-9 bg-gray-800 hover:bg-gray-700 cursor-pointer rounded-full flex justify-center items-center text-gray-500">×</a>
             </div>
             {history.map((item, index) => (
                 <div key={index}>{item}</div>
             ))}
             <div className="flex">
-                <span className="bg-gradient-to-r from-orange-500 to-yellow-500 text-transparent bg-clip-text">$&nbsp;</span>
+                <span className="text-[#06b6d4]">$&nbsp;</span>
                 <input
                     ref={inputRef}
                     type="text"
