@@ -5,7 +5,7 @@ export const Projects: React.FC = () => (
         <h2 className="text-2xl font-bold mb-2 text-[#06b6d4]">My Projects</h2>
         <h3>Current projects:</h3>
         <ul className="list-disc list-inside">
-            <li><a href="#" className='text-[#06B6D4] underline hover:text-[#49d8f1]'>Fitness web app</a> - Comming soon!</li>
+            <li><a href="https://github.com/uikromm/financial-sheet" className='text-[#06B6D4] underline hover:text-[#91eafa]'>Financial Sheet</a></li>
         </ul>
         <br />
         <h3>Selected projects:</h3>
